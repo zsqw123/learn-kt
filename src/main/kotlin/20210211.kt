@@ -1,4 +1,5 @@
 fun main() {
+    // kotlin 解构
     data class Person(var id: Int, var name: String, var sex: Boolean)
 
     val person = Person(0, "nmd", true)
@@ -14,4 +15,12 @@ fun main() {
     listOf(person, person).forEach { (id, name) ->
         println("id: $id, name: $name")
     }
+
+    // kotlin 中缀: infix
+    infix fun Person.changeSex(newSex: Boolean) {
+        this.sex = newSex
+    }
+    println(person.sex)
+    person changeSex false
+    println(person.sex)
 }
