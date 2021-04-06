@@ -5,7 +5,7 @@ import kotlin.concurrent.thread
 
 // 生产者消费者模型
 fun main() {
-//    byQueue()
+    byQueue()
     HandleClass.byThread()
 }
 
